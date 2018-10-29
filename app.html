@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <script type="text/javascript" src="app.js">
+    // Querido professor deu vários problemas, tetei refazer e procurei vários amigos meus para me ajudar mas não consegui terminar.
+  </script>
+
+  <div id="postagens">
+    <label for="nome">Nome:</label>
+    <input type="text" v-model="nome">
+    <button type="button" v-onclick="addNome()">Adicionar</button>
+    <p v-for="nome in nomes">{{ nome }}</p>
+    
+    <button type="button" v-onclick="comentário()">Adicionar</button>
+    <p v-for="comentario in comentarios">{{ comentario }}</p>
+    
+    <div>
+      <button v-on:click= "curtidas()">curtir </button>
+      <p id="curtir">Curtidas : {{ curtir }}</p>
+    </div>
+    <div>
+      <button v-on:click="descurtidas()">descurtir</button>
+      <p id="descurtir">Descurtidas : {{ descurtir }}</p>
+    </div>
+    
+
+  </div>
+
+</body>
+</html>
